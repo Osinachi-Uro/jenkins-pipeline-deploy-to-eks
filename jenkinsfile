@@ -19,11 +19,11 @@ pipeline {
         }
         
         stage("Install on EKS") {
-            steps {
-                script {
-                    dir('kube-prometheus-module') {
-                        sh "terraform init"
-                        sh "terraform apply -auto-approve"
+          steps {
+             script {
+                   dir('kube-prometheus-module') {
+                      sh "terraform init"
+                      sh "terraform apply -auto-approve"
                     }
                 }
             }
